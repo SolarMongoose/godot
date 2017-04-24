@@ -217,7 +217,7 @@ void CollisionShape2DEditor::commit_handle(int idx, Variant &p_org) {
 				undo_redo->add_do_method(capsule.ptr(), "set_radius", capsule->get_radius());
 				undo_redo->add_do_method(c, "update");
 				undo_redo->add_undo_method(capsule.ptr(), "set_radius", p_org);
-				undo_redo->add_do_method(c, "update");
+				undo_redo->add_undo_method(c, "update");
 			} else if (idx == 1) {
 				undo_redo->add_do_method(capsule.ptr(), "set_height", capsule->get_height());
 				undo_redo->add_do_method(c, "update");
